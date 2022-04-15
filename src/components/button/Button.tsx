@@ -1,11 +1,18 @@
+import classNames from 'classnames';
 import React from 'react';
+
 import './Button.scss'
 
-function Button() {
+interface Props {
+  text: string;
+  variant: 'primary' | 'secondary';
+}
+
+function Button(props: Props) {
   return (
-    <div className="">
-      
-    </div>
+    <button className={"my-button " + "my-button--" + props.variant}>
+      <p className="my-button__txt" data-testid="button__txt">{props.text}</p>
+    </button>
   );
 }
 
