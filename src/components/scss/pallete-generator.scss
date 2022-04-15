@@ -1,0 +1,78 @@
+@import './themes/TestColors.scss';
+
+$c-primary-050: lighten($c-primary, 20%);
+$c-primary-100: lighten($c-primary, 15%);
+$c-primary-200: lighten($c-primary, 10%);
+$c-primary-300: lighten($c-primary, 5%);
+$c-primary-400: lighten($c-primary, 2%);
+$c-primary-500: $c-primary;
+$c-primary-600: darken($c-primary, 2%);
+$c-primary-700: darken($c-primary, 5%);
+$c-primary-800: darken($c-primary, 10%);
+$c-primary-900: darken($c-primary, 15%);
+
+$c-primary-var-050: lighten($c-primary-var, 20%);
+$c-primary-var-100: lighten($c-primary-var, 15%);
+$c-primary-var-200: lighten($c-primary-var, 10%);
+$c-primary-var-300: lighten($c-primary-var, 5%);
+$c-primary-var-400: lighten($c-primary-var, 2%);
+$c-primary-var-500: $c-primary-var;
+$c-primary-var-600: darken($c-primary-var, 2%);
+$c-primary-var-700: darken($c-primary-var, 5%);
+$c-primary-var-800: darken($c-primary-var, 10%);
+$c-primary-var-900: darken($c-primary-var, 15%);
+
+$c-secondary-050: lighten($c-secondary, 20%);
+$c-secondary-100: lighten($c-secondary, 15%);
+$c-secondary-200: lighten($c-secondary, 10%);
+$c-secondary-300: lighten($c-secondary, 5%);
+$c-secondary-400: lighten($c-secondary, 2%);
+$c-secondary-500: $c-secondary;
+$c-secondary-600: darken($c-secondary, 2%);
+$c-secondary-700: darken($c-secondary, 5%);
+$c-secondary-800: darken($c-secondary, 10%);
+$c-secondary-900: darken($c-secondary, 15%);
+
+$c-secondary-var-050: lighten($c-secondary-var, 20%);
+$c-secondary-var-100: lighten($c-secondary-var, 15%);
+$c-secondary-var-200: lighten($c-secondary-var, 10%);
+$c-secondary-var-300: lighten($c-secondary-var, 5%);
+$c-secondary-var-400: lighten($c-secondary-var, 2%);
+$c-secondary-var-500: $c-secondary-var;
+$c-secondary-var-600: darken($c-secondary-var, 2%);
+$c-secondary-var-700: darken($c-secondary-var, 5%);
+$c-secondary-var-800: darken($c-secondary-var, 10%);
+$c-secondary-var-900: darken($c-secondary-var, 15%);
+
+$c-neutral-050: lighten($c-neutral, 20%);
+$c-neutral-100: lighten($c-neutral, 15%);
+$c-neutral-200: lighten($c-neutral, 10%);
+$c-neutral-300: lighten($c-neutral, 5%);
+$c-neutral-400: lighten($c-neutral, 2%);
+$c-neutral-500: $c-neutral;
+$c-neutral-600: darken($c-neutral, 2%);
+$c-neutral-700: darken($c-neutral, 5%);
+$c-neutral-800: darken($c-neutral, 10%);
+$c-neutral-900: darken($c-neutral, 15%);
+
+$c-neutral-var-050: lighten($c-neutral-var, 20%);
+$c-neutral-var-100: lighten($c-neutral-var, 15%);
+$c-neutral-var-200: lighten($c-neutral-var, 10%);
+$c-neutral-var-300: lighten($c-neutral-var, 5%);
+$c-neutral-var-400: lighten($c-neutral-var, 2%);
+$c-neutral-var-500: $c-neutral-var;
+$c-neutral-var-600: darken($c-neutral-var, 2%);
+$c-neutral-var-700: darken($c-neutral-var, 5%);
+$c-neutral-var-800: darken($c-neutral-var, 10%);
+$c-neutral-var-900: darken($c-secondary-var, 15%);
+
+$c-background-050: lighten($c-background, 20%);
+$c-background-100: lighten($c-background, 15%);
+$c-background-200: lighten($c-background, 10%);
+$c-background-300: lighten($c-background, 5%);
+$c-background-400: lighten($c-background, 2%);
+$c-background-500: $c-background;
+$c-background-600: darken($c-background, 2%);
+$c-background-700: darken($c-background, 5%);
+$c-background-800: darken($c-background, 10%);
+$c-neutral-900: darken($c-secondary-var, 15%);
