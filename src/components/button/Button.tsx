@@ -5,13 +5,13 @@ import './Button.scss'
 
 interface Props {
   text: string;
-  variant: 'primary' | 'secondary';
+  variant?: 'primary' | 'secondary';
 }
 
-function Button(props: Props) {
+function Button({text, variant = 'primary'}: Props) {
   return (
-    <button className={"my-button " + "my-button--" + props.variant}>
-      <p className="my-button__txt" data-testid="button__txt">{props.text}</p>
+    <button className={"my-button " + "my-button--" + variant} data-testid="button">
+      <p className="my-button__txt" data-testid="button__txt">{text}</p> 
     </button>
   );
 }
