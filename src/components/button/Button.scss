@@ -1,10 +1,11 @@
 @import '../scss/pallete-generator.scss';
+@import '../scss/confiq.scss';
 
 .my-button {
     cursor: pointer;
     border: none;
    // color: white;
-    padding: 1rem 1rem;
+    padding: $button-padding;
     text-align: center;
     text-decoration: none;
     display: inline-block;
@@ -17,15 +18,15 @@
 }
 
 .my-button--small {
-    font-size: .8rem;
+    font-size: $font-size-S;
 }
 
 .my-button--normal {
-    font-size: 1rem;
+    font-size: $font-size-N;
 }
 
 .my-button--large {
-    font-size: 1.2rem;
+    font-size: $font-size-L;
 }
 
 .my-button--round-corners {
