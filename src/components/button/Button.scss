@@ -8,13 +8,24 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 1rem;
     overflow: hidden;
-    
+
     .my-button__txt {
         padding: 0;
         margin: 0;
     }
+}
+
+.my-button--small {
+    font-size: .8rem;
+}
+
+.my-button--normal {
+    font-size: 1rem;
+}
+
+.my-button--large {
+    font-size: 1.2rem;
 }
 
 .my-button--round-corners {
