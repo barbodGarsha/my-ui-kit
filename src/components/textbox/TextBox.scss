@@ -1,0 +1,59 @@
+@import '../scss/pallete-generator.scss';
+@import '../scss/confiq.scss';
+
+.my-textbox {
+    cursor: pointer;
+    border: none;
+   // color: white;
+    padding: $testing-padding;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    overflow: hidden;
+
+    .my-textbox__txt {
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.my-textbox--small {
+    font-size: $font-size-S;
+}
+
+.my-textbox--normal {
+    font-size: $font-size-N;
+}
+
+.my-textbox--large {
+    font-size: $font-size-L;
+}
+
+.my-textbox--round-corners {
+    border-radius: 5px;
+}
+
+.my-textbox--primary {
+    background-color: $c-background-500;
+    border: 2px solid $c-primary-500;
+    color: $c-neutral-500;
+}
+.my-textbox--primary:hover {
+    background-color: $c-background-700;
+}
+.my-textbox--primary:focus {
+    outline: none !important;
+    background-color: $c-background-800;
+    border: 2px solid $c-primary-700;
+}
+
+.my-textbox--secondary {
+    background-color: $c-secondary-500;
+    color: $c-neutral-500;
+}
+.my-textbox--secondary:hover {
+    background-color: $c-secondary-700;
+}
+.my-textbox--secondary:active {
+    background-color: $c-secondary-800;
+}
