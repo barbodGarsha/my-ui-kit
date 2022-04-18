@@ -1,0 +1,22 @@
+@import '../scss/pallete-generator.scss';
+@import '../scss/confiq.scss';
+
+.my-radio-button {
+
+    display: flex;
+
+    .my-radio-button__item {
+        display: flex;
+        padding: $testing-padding;
+        justify-content: center;
+        align-items: center;
+        .my-radio-button__item__toggle {
+            cursor: pointer;
+            border-radius: 50%;
+            border: 1px solid $c-background-800;
+            background-color: $c-background-500;
+            width: 1rem;
+            height: 1rem;
+        }
+    }
+}
