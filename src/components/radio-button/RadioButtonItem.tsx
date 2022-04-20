@@ -4,19 +4,19 @@ import React, { HTMLAttributes } from 'react';
 import './RadioButton.scss'
 
 interface Props {
-    variant?: 'empty' | 'text';
+  checked ?: boolean;
 
-    children ?: React.ReactNode;
+  children ?: React.ReactNode;
 }
 
-function RadioButtonItem({variant = 'empty', ...props}: Props) {
-  
+function RadioButtonItem({checked = false, ...props}: Props) {
+
   return (
-    <div 
-        className={"my-radio-button__item " + "my-radio-button__item--" + variant}
-        data-testid="radio-button__item-id">
-        <div className="my-radio-button__item__toggle">
-        </div>
+    <div
+        data-radio-button__item  
+        className={"my-radio-button__item " + classNames({"my-radio-button__item--checked" : checked})}
+        data-testid="radio-button__item">
+        <div data-radio-button__item__toggle data-testid="radio-button__item__toggle" className={"my-radio-button__item__toggle"}></div>
         {props.children}
     </div>
   );
