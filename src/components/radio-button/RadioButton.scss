@@ -12,11 +12,45 @@
         align-items: center;
         .my-radio-button__item__toggle {
             cursor: pointer;
+            overflow: hidden;
             border-radius: 50%;
             border: 1px solid $c-background-800;
             background-color: $c-background-500;
             width: 1rem;
             height: 1rem;
+        }
+    }
+}
+
+.my-radio-button--primary {
+
+    .my-radio-button__item {
+        .my-radio-button__item__toggle {
+            border: 1px solid $c-background-800;
+            background-color: $c-background-500;
+        }
+    }
+    .my-radio-button__item--checked {
+        .my-radio-button__item__toggle {
+            border: 1px solid $c-neutral-var-800;
+            background-color: $c-neutral-var-500;
+        }
+    }
+
+}
+
+.my-radio-button--secondary {
+
+    .my-radio-button__item {
+        .my-radio-button__item__toggle {
+            border: 1px solid $c-neutral-var-800;
+            background-color: $c-neutral-var-500;
+        }
+    }  
+    .my-radio-button__item--checked {
+        .my-radio-button__item__toggle {
+            border: 1px solid $c-background-800;
+            background-color: $c-background-500;
         }
     }
 }
