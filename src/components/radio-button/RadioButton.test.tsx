@@ -29,7 +29,7 @@ test('RadioButton Component can only contain RadioButtonItems.', () => {
     const {getByTestId} = render(
     
     <RadioButton title={title} variant='secondary'>
-        <RadioButtonItem checked={true}></RadioButtonItem>
+        <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
@@ -50,7 +50,7 @@ test('Only one RadioButtonItem can be checked.', () => {
     const {getByTestId} = render(
     
     <RadioButton title={title} variant='secondary'>
-        <RadioButtonItem checked={true}></RadioButtonItem>
+        <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
@@ -91,12 +91,12 @@ test('RadioButtonItem Click works.', () => {
     const title = "Testing";
     const {getByTestId} = render(
     
-    <RadioButton title={title} variant='secondary'>
+    <RadioButton title={title} variant='secondary' checked_btn_index={4}>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
-        <RadioButtonItem checked={true}></RadioButtonItem>
+        <RadioButtonItem></RadioButtonItem>
         <RadioButtonItem></RadioButtonItem>
     </RadioButton>);
 

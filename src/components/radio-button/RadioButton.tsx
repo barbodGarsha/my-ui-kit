@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React, {useState, useRef, Children, HTMLAttributes, ReactFragment } from 'react';
+import React, {useState, useRef, useEffect, Children, HTMLAttributes, ReactFragment } from 'react';
 
 import RadioButtonItem from './RadioButtonItem';
 import './RadioButton.scss'
@@ -10,10 +10,11 @@ interface Props {
     variant?: 'primary' | 'secondary';
     size?: 'small' | 'normal' | 'large'
 
+    checked_btn_index?: number;
     children ?: React.ReactNode;
 }
 
-function RadioButton({title = '', variant = 'primary', size = 'normal', ...props}: Props) {
+function RadioButton({title = '', variant = 'primary', size = 'normal', checked_btn_index = 0, ...props}: Props) {
 
   let childern = React.Children.toArray(props.children);
   childern.map((item, i) => {
@@ -22,7 +23,18 @@ function RadioButton({title = '', variant = 'primary', size = 'normal', ...props
         childern.splice(i, 1);
       }
     }
-  }) 
+  })  
+
+  useEffect(() => {
+    
+    const items = radio_button.current?.querySelectorAll('[data-radio-button__item]');
+    if(items && items.length > 0) {
+      items[checked_btn_index].classList.add("my-radio-button__item--checked");
+    }
+    
+  });
+
+  
 
   const radio_button = useRef<HTMLDivElement>(null);
   let [options, set_options] = useState(childern as ReactFragment[]);
