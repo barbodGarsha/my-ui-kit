@@ -5,16 +5,19 @@ import RadioButtonItem from './RadioButtonItem';
 import './RadioButton.scss'
 import { type } from 'os';
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
     title?: string;
     variant?: 'primary' | 'secondary';
     size?: 'small' | 'normal' | 'large'
 
     checked_btn_index?: number;
     children ?: React.ReactNode;
+    on_input_change?: (index: number) => void;
 }
 
 function RadioButton({title = '', variant = 'primary', size = 'normal', checked_btn_index = 0, ...props}: Props) {
+
+  const radio_button = useRef<HTMLDivElement>(null);
 
   let childern = React.Children.toArray(props.children);
   childern.map((item, i) => {
@@ -25,32 +28,40 @@ function RadioButton({title = '', variant = 'primary', size = 'normal', checked_
     }
   })  
 
+  let [options, set_options] = useState(childern as ReactFragment[]);
+  let [index, set_index] = useState(checked_btn_index);
+
   useEffect(() => {
     
     const items = radio_button.current?.querySelectorAll('[data-radio-button__item]');
+
+    items?.forEach(item => {
+      item.classList.remove("my-radio-button__item--checked")
+    })
+
     if(items && items.length > 0) {
-      items[checked_btn_index].classList.add("my-radio-button__item--checked");
+      items[index].classList.add("my-radio-button__item--checked");
     }
-    
   });
 
-  
-
-  const radio_button = useRef<HTMLDivElement>(null);
-  let [options, set_options] = useState(childern as ReactFragment[]);
 
   function handle_on_click(e: React.MouseEvent<HTMLElement>){
     const el = e.target as HTMLElement;
-    if(el.hasAttribute('data-radio-button__item__toggle'))
-    {
-      const el_parent = el.parentNode as HTMLElement;
-      const items = radio_button.current?.querySelectorAll('[data-radio-button__item]')
-      
-      items?.forEach(item => {
-        item.classList.remove("my-radio-button__item--checked")
-      })
-      el_parent.classList.add("my-radio-button__item--checked");
-    }
+    
+    const el_parent = el.parentNode as HTMLElement;
+    const items = radio_button.current?.querySelectorAll('[data-radio-button__item]')
+    
+    items?.forEach((item, i) => {
+      if(item === el_parent) 
+      {
+        if(i != index) { 
+          set_index(i); 
+          if(props.on_input_change) {
+            props.on_input_change(i);
+          }
+        }
+      }
+    })      
   }
   
   return (
@@ -60,11 +71,11 @@ function RadioButton({title = '', variant = 'primary', size = 'normal', checked_
         "my-radio-button--" + size }
         data-testid="radio-button"
         
-        onClick={handle_on_click}
-        >
-        {  
-          options
+        onClick={handle_on_click}>   
+        {
+         options
         }
+        
     </div>
   );
 }

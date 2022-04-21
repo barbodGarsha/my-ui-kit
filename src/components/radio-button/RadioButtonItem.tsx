@@ -3,7 +3,7 @@ import React, { HTMLAttributes } from 'react';
 
 import './RadioButton.scss'
 
-interface Props {
+interface Props extends React.HTMLAttributes<HTMLDivElement> {
   children ?: React.ReactNode;
 }
 
@@ -14,7 +14,7 @@ function RadioButtonItem(props: Props) {
         data-radio-button__item  
         className={"my-radio-button__item"}
         data-testid="radio-button__item">
-        <div data-radio-button__item__toggle data-testid="radio-button__item__toggle" className={"my-radio-button__item__toggle"}></div>
+        <div {...props} data-radio-button__item__toggle data-testid="radio-button__item__toggle" className={"my-radio-button__item__toggle"}></div>
         {props.children}
     </div>
   );

@@ -6,11 +6,13 @@
     display: flex;
 
     .my-radio-button__item {
+        pointer-events: none; 
         display: flex;
         padding: $testing-padding;
         justify-content: center;
         align-items: center;
         .my-radio-button__item__toggle {
+            pointer-events: auto; 
             cursor: pointer;
             overflow: hidden;
             border-radius: 50%;
