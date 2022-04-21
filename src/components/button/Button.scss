@@ -12,6 +12,7 @@
     overflow: hidden;
 
     .my-button__txt {
+        pointer-events: none; 
         padding: 0;
         margin: 0;
     }
