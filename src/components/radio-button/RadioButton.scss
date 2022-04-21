@@ -24,6 +24,24 @@
     }
 }
 
+.my-radio-button--large {
+    .my-radio-button__item {
+         .my-radio-button__item__toggle {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}
+
+.my-radio-button--small {
+    .my-radio-button__item {
+         .my-radio-button__item__toggle {
+            width: .8rem;
+            height: .8rem;
+        }
+    }
+}
+
 .my-radio-button--primary {
 
     .my-radio-button__item {
