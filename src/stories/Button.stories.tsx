@@ -17,6 +17,8 @@ const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
 
+Primary.storyName = 'Primary';
+
 Primary.args = {
   text: 'Click Me',
   variant: 'primary'
@@ -24,6 +26,7 @@ Primary.args = {
 
 export const Secondary = Template.bind({});
 
+Secondary.storyName = 'Secondary';
 Secondary.args = {
   text: 'Click Me',
   variant: 'secondary'
@@ -31,6 +34,7 @@ Secondary.args = {
 
 export const Large = Template.bind({});
 
+Large.storyName = 'Large';
 Large.args = {
   text: 'Click Me',
   size: 'large'
@@ -38,12 +42,16 @@ Large.args = {
 
 export const Small = Template.bind({});
 
+Small.storyName = 'Small';
 Small.args = {
   text: 'Click Me',
   size: 'small'
 };
 
+
 export const Without_Round_Corners = Template.bind({});
+
+Without_Round_Corners.storyName = 'Without Round Corners';
 
 Without_Round_Corners.args = {
   text: 'Click Me',

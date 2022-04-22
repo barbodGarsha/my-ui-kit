@@ -31,14 +31,20 @@ Secondary.args = {
  variant: 'secondary'
 };
 
+Secondary.storyName = 'Secondary';
+
 export const Large = My_Radio_Button.bind({});
 
 Large.args = {
   size: 'large'
 };
 
+Large.storyName = 'Large';
+
 export const Small = My_Radio_Button.bind({});
 
 Small.args = {
   size: 'small'
 };
+
+Small.storyName = 'Small';
